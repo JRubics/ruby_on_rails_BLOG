@@ -1,0 +1,6 @@
+<% @tags.each do |t| %>
+    <li>
+     <%= link_to t.name, tag_path(t), class: 'article_title' %>
+
+    </li>
+  <% end %>
