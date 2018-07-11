@@ -7,6 +7,10 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id]) #linkuje ga za html
+
+    @comment = Comment.new  #za komentare,mora jedan prazan prvo
+    @comment.article_id = @article.id
+
   end
 
   def new
